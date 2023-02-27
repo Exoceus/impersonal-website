@@ -20,12 +20,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-three/drei": "^9.56.27",
+    "@react-three/fiber": "^8.11.5",
+    "@types/three": "^0.149.0",
     "gatsby": "^5.7.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-sitemap": "^6.7.0",
     "gatsby-plugin-typescript": "^5.7.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.150.0"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
