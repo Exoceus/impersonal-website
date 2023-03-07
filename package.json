@@ -20,9 +20,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-spring/three": "^9.7.1",
     "@react-three/drei": "^9.56.27",
     "@react-three/fiber": "^8.11.5",
     "@types/three": "^0.149.0",
+    "@use-gesture/react": "^10.2.24",
     "gatsby": "^5.7.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-sitemap": "^6.7.0",
