@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, Suspense } from 'react'
 import type { HeadFC, PageProps } from "gatsby"
-import { Gltf, OrbitControls } from '@react-three/drei'
+import { Html, OrbitControls, useProgress } from '@react-three/drei'
 
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
@@ -11,6 +11,7 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
 import Shoe from "../models/Shoe"
+import Lever_Handle from "../models/Lever_Handle"
 
 import { Canvas, useFrame, ThreeElements } from '@react-three/fiber'
 import * as THREE from 'three'
@@ -36,6 +37,10 @@ function Box(props: ThreeElements['mesh']) {
 
 const conversionFactor = 180 / Math.PI;
 
+function Loader() {
+  const { progress } = useProgress()
+  return <Html center>{progress} % loaded</Html>
+}
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -69,7 +74,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <div className="page-wrapper">
       <Navbar />
-      <h1>WORK IN PROGRESS! Proceex with caution</h1>
+      <h1>WORK IN PROGRESS! Proceed with caution</h1>
       <Canvas>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
@@ -77,14 +82,22 @@ const IndexPage: React.FC<PageProps> = () => {
         <Box position={[1.2, 0, 0]} />
       </Canvas>
       <Canvas style={{ height: "500px" }}>
-        <ambientLight />
         {/* <pointLight position={[10, 10, 10]} /> */}
         {/* <OrbitControls makeDefault /> */}
-        <Shoe position={[0, 0, 0]} rotation={[rotx, roty, rotz]} scale={[1, 1, 1]} />
+        <Suspense fallback={<Loader />}>
+          <ambientLight />
+          <Shoe position={[0, 0, 0]} rotation={[rotx, roty, rotz]} scale={[1, 1, 1]} />
+        </Suspense>
       </Canvas>
-      {/* <input type="range" min="0" max="360" value={Number(rotx) * conversionFactor} onChange={e => setrotx(Number(e.target.value) / conversionFactor)} /> */}
-      {/* <input type="range" min="0" max="360" value={Number(roty) * conversionFactor} onChange={e => setroty(Number(e.target.value) / conversionFactor)} /> */}
-      {/* <input type="range" min="0" max="360" value={Number(rotz) * conversionFactor} onChange={e => setrotz(Number(e.target.value) / conversionFactor)} /> */}
+      <Canvas style={{ height: "500px" }}>
+        {/* <pointLight position={[10, 10, 10]} /> */}
+        {/* <OrbitControls makeDefault /> */}
+        <Suspense fallback={<Loader />}>
+          <ambientLight />
+          {/* <OrbitControls makeDefault /> */}
+          <Lever_Handle position={[0, 0, 0]} rotation={[rotx, 270 * Math.PI / 180, rotz]} scale={[0.5, 0.5, 0.5]} />
+        </Suspense>
+      </Canvas>
 
       <div className="inner-wrapper">
         <main>

@@ -35,4 +35,4 @@ export default function Shoe(props) {
   )
 }
 
-useGLTF.preload('/Shoe-transformed.glb')
+useGLTF.preload('models/Shoe-transformed.glb')
