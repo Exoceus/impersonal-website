@@ -46,6 +46,7 @@ function Loader() {
 
 const IndexPage: React.FC<PageProps> = () => {
   const [shoeRot, setShoeRot] = useState(0.0)
+  const [leverPulled, setLeverPulled] = useState(false)
 
   // const [rotx, setRotx] = useState(0.0)
   // const [roty, setRoty] = useState(0.0)
@@ -79,11 +80,12 @@ const IndexPage: React.FC<PageProps> = () => {
       </Canvas>
       {/* <input type='range' min="0" max={360} value={roty} onChange={e => setRoty(parseFloat(e.target.value))} />
       {roty} */}
+      {leverPulled ? <h1>Content to Reveal</h1> : <h1>Pull the Lever</h1>}
       <Canvas style={{ height: "500px", border: " 5px solid red" }}>
         <Suspense fallback={<Loader />}>
           <ambientLight />
           {/* <OrbitControls makeDefault /> */}
-          <Lever rotation={[0 * Math.PI / 180, 290 * Math.PI / 180, 0]} scale={0.25} />
+          <Lever setLeverPulled={setLeverPulled} />
         </Suspense>
       </Canvas>
 

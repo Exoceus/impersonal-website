@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 import { useThree } from "@react-three/fiber";
 import { useDrag } from '@use-gesture/react';
 
-export default function Lever(props) {
+export default function Lever({ setLeverPulled }) {
   const ref = useRef();
   const [position, setPosition] = useState([0, 5, 0]);
   const [isDragging, setIsDragging] = useState(false);
@@ -18,8 +18,9 @@ export default function Lever(props) {
     ({ movement: [x, y], timeStamp, event, active }) => {
       const [og_x, , z] = position;
       console.log("offset", x, y)
-      let new_y = 5 + (-y / aspect) * 3;
+      let new_y = 5 + (-y / aspect) * 4; // times 4 since we scale by 0.25
       if (new_y <= -5) {
+        setLeverPulled(true);
         new_y = -5;
       } else if (new_y >= 5) {
         new_y = 5;
@@ -40,7 +41,7 @@ export default function Lever(props) {
 
   const { nodes, materials } = useGLTF('models/Lever_Full_Model-transformed.glb')
   return (
-    <group {...props} dispose={null}>
+    <group rotation={[0 * Math.PI / 180, 290 * Math.PI / 180, 0]} scale={0.25} dispose={null}>
       <group ref={ref} position={position}
         {...bind()}>
         <mesh geometry={nodes.Cylinder001.geometry} material={materials['Lever Shaft']} rotation={[-Math.PI / 2, 0, 0]}>
