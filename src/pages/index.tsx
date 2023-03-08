@@ -12,6 +12,7 @@ import Footer from "../components/Footer"
 
 import Shoe from "../models/Shoe"
 import Lever_Handle from "../models/Lever_Handle"
+import Lever from "../models/Lever"
 
 import { Canvas, useFrame, ThreeElements } from '@react-three/fiber'
 import * as THREE from 'three'
@@ -44,23 +45,18 @@ function Loader() {
 
 
 const IndexPage: React.FC<PageProps> = () => {
-  const [rotx, setrotx] = useState(0)
-  const [roty, setroty] = useState(0.0)
-  const [rotz, setrotz] = useState(0.7)
+  const [shoeRot, setShoeRot] = useState(0.0)
+
+  // const [rotx, setRotx] = useState(0.0)
+  // const [roty, setRoty] = useState(0.0)
+  // const [rotz, setRotz] = useState(0.0)
 
   useEffect(() => {
     console.warn("HERE?")
-    const interval = setInterval(() => {
-      update()
-    }, 10);
     window.addEventListener('scroll', handleScroll);
-    return () => { clearInterval(interval); window.addEventListener('scroll', handleScroll); }
+    return () => { window.addEventListener('scroll', handleScroll); }
 
   }, [])
-
-  const update = () => {
-    // setroty(roty => (roty + 0.01) % (2 * Math.PI));
-  }
 
   const handleScroll = (event: any) => {
     const { target } = event;
@@ -68,7 +64,7 @@ const IndexPage: React.FC<PageProps> = () => {
     const { scrollTop: documentElementScrollTop, scrollHeight: documentElementScrollHeight, clientHeight } = documentElement;
     const { scrollTop: bodyScrollTop, scrollHeight: bodyScrollHeight } = body;
     const percent = (documentElementScrollTop || bodyScrollTop) / ((documentElementScrollHeight || bodyScrollHeight) - clientHeight) * 100;
-    setroty(roty => (percent / 5) % (2 * Math.PI))
+    setShoeRot(roty => (percent / 5) % (2 * Math.PI))
   }
 
   return (
@@ -81,23 +77,34 @@ const IndexPage: React.FC<PageProps> = () => {
         <Box position={[-1.2, 0, 0]} />
         <Box position={[1.2, 0, 0]} />
       </Canvas>
+      {/* <input type='range' min="0" max={360} value={roty} onChange={e => setRoty(parseFloat(e.target.value))} />
+      {roty} */}
+      <Canvas style={{ height: "500px", border: " 5px solid red" }}>
+        <Suspense fallback={<Loader />}>
+          <ambientLight />
+          {/* <OrbitControls makeDefault /> */}
+          <Lever rotation={[0 * Math.PI / 180, 270 * Math.PI / 180, 0]} scale={0.5} />
+        </Suspense>
+      </Canvas>
+
       <Canvas style={{ height: "500px" }}>
         {/* <pointLight position={[10, 10, 10]} /> */}
         {/* <OrbitControls makeDefault /> */}
         <Suspense fallback={<Loader />}>
           <ambientLight />
-          <Shoe position={[0, 0, 0]} rotation={[rotx, roty, rotz]} scale={[1, 1, 1]} />
+          <Shoe position={[0, 0, 0]} rotation={[0, shoeRot, 0.7]} scale={[1, 1, 1]} />
         </Suspense>
       </Canvas>
-      <Canvas style={{ height: "500px" }}>
+      <Canvas style={{ height: "500px", border: " 5px solid red" }}>
         {/* <pointLight position={[10, 10, 10]} /> */}
         {/* <OrbitControls makeDefault /> */}
         <Suspense fallback={<Loader />}>
           <ambientLight />
           {/* <OrbitControls makeDefault /> */}
-          <Lever_Handle position={[0, 0, 0]} rotation={[rotx, 270 * Math.PI / 180, rotz]} scale={[0.5, 0.5, 0.5]} />
+          <Lever_Handle rotation={[0, 270 * Math.PI / 180, 0.7]} />
         </Suspense>
       </Canvas>
+
 
       <div className="inner-wrapper">
         <main>
