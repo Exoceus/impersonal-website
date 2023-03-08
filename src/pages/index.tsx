@@ -83,7 +83,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Suspense fallback={<Loader />}>
           <ambientLight />
           {/* <OrbitControls makeDefault /> */}
-          <Lever rotation={[0 * Math.PI / 180, 270 * Math.PI / 180, 0]} scale={0.5} />
+          <Lever rotation={[0 * Math.PI / 180, 290 * Math.PI / 180, 0]} scale={0.25} />
         </Suspense>
       </Canvas>
 
