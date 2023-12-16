@@ -34,3 +34,14 @@ main {
 .page-wrapper {
     padding: 1rem;
 }
+
+.explorer-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 250px;
+    align-items: center;
+}
+
+.lever-canvas {
+    max-width: 50%;
+}
