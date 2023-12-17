@@ -37,28 +37,9 @@ export default function Experience() {
     return (
         <div>
             <h3>Experience</h3>
-            <h1>Cradle</h1>
-            <p>
-                Cradle is an early stage crypto-gaming that I joined as the 8th employee as a{" "}
-                <span style={{textDecoration: "line-through"}}>no stack</span> full stack engineer where it grew from 0
-                to over 10k users. I have worked 2 co-op terms and part time over the span of 1.5 years at the company.
-            </p>
-            <p>
-                Some cool accomplishments were:
-                <ul>
-                    <li>
-                        Designing and developing security architecture using SSS to allow multi-device logins without
-                        storing private keys.
-                    </li>
-                    <li>
-                        Worked as the primary developer on a Flask API that serves all company products and was used for
-                        a demo for a $4M Series A.
-                    </li>
-                </ul>
-            </p>
 
             <div style={{minHeight: "300px"}}>
-                <h1>MIT-PITT-RW</h1>
+                <h4>autonomous race car</h4>
                 <div style={{height: "200px"}}>
                     <Canvas flat>
                         <ambientLight />
@@ -95,7 +76,27 @@ export default function Experience() {
                 Asseto Corsa, LGSVL).
             </p>
 
-            <h1>Zappos</h1>
+            <h4>web3 gaming</h4>
+            <p>
+                Cradle is an early stage crypto-gaming that I joined as the 8th employee as a{" "}
+                <span style={{textDecoration: "line-through"}}>no stack</span> full stack engineer where it grew from 0
+                to over 10k users. I have worked 2 co-op terms and part time over the span of 1.5 years at the company.
+            </p>
+            <p>
+                Some cool accomplishments were:
+                <ul>
+                    <li>
+                        Designing and developing security architecture using SSS to allow multi-device logins without
+                        storing private keys.
+                    </li>
+                    <li>
+                        Worked as the primary developer on a Flask API that serves all company products and was used for
+                        a demo for a $4M Series A.
+                    </li>
+                </ul>
+            </p>
+
+            <h4>virtual shoe try-on</h4>
             <Canvas style={{height: "500px"}}>
                 <Suspense fallback={<Loader />}>
                     <pointLight position={[-2, -2, 0]} />

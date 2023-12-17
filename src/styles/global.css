@@ -1,9 +1,11 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;600;900&family=JetBrains+Mono:wght@200&display=swap");
 
 body {
     margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
 nav {
@@ -43,4 +45,15 @@ main {
 
 .lever-canvas {
     max-width: 50%;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h4 {
+    text-transform: lowercase;
+    font-weight: 600;
+    font-size: 1.5rem;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Navbar() {
     return (
@@ -8,5 +8,5 @@ export default function Navbar() {
             <div className="nav-items">Experience</div>
             <div className="nav-items">Contact</div>
         </nav>
-    )
+    );
 }
