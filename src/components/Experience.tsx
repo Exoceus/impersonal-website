@@ -99,8 +99,9 @@ export default function Experience() {
                 </center>
             </div>
             <p>
-                MIT Driverless is a student club collaboration between MIT, Pitsburgh, Rochester and Waterloo that
-                competes in the Indy Autonomous Challenge (Las Vegas, Indiannapolis, Monza in Italy).
+                <a href="https://www.mitpittrw.com/">MIT-PITT-RW</a> is a student club collaboration between MIT,
+                Pitsburgh, Rochester and Waterloo that competes in the Indy Autonomous Challenge (Las Vegas,
+                Indiannapolis, Monza in Italy).
             </p>
             {renderCarContent()}
 
