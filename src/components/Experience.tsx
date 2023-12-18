@@ -1,4 +1,3 @@
-import {OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 import React, {Suspense, useEffect, useState} from "react";
 
@@ -8,7 +7,7 @@ import AV21 from "../models/AV21";
 import Shoe from "../models/Shoe";
 
 export default function Experience() {
-    const [movementSpeed, setMovementSpeed] = useState<Number>(6);
+    const [movementSpeed, setMovementSpeed] = useState<number>(6);
     const [shoeRot, setShoeRot] = useState(0.0);
 
     useEffect(() => {
@@ -34,6 +33,37 @@ export default function Experience() {
         setShoeRot(() => (percent / 5) % (2 * Math.PI));
     };
 
+    const renderCarContent = () => {
+        if (movementSpeed * 10 < 100) {
+            return <p>Accelerate the car to learn more!</p>;
+        } else if (movementSpeed * 10 < 200) {
+            return (
+                <>
+                    <p>
+                        I'm a part of Simulation and Infrastructure team that aims to optimize the developer experience
+                        of the other subteams (Perception, Controls, etc.) by maintaining and updating the tech stack
+                        (Docker, ROS2, Asseto Corsa, LGSVL).
+                    </p>
+                    <p>Accelerate the car to learn more!</p>
+                </>
+            );
+        } else {
+            return (
+                <>
+                    <p>
+                        I'm a part of Simulation and Infrastructure team that aims to optimize the developer experience
+                        of the other subteams (Perception, Controls, etc.) by maintaining and updating the tech stack
+                        (Docker, ROS2, Asseto Corsa, LGSVL).
+                    </p>
+                    <p>
+                        I got to travel to Monza, Italy (track of the F1 Italian Grand Prix, Ferrari home track) for a
+                        month as a part of the "boots on the group" crew which conducts on-track testing
+                    </p>
+                </>
+            );
+        }
+    };
+
     return (
         <div>
             <h3>Experience</h3>
@@ -45,7 +75,6 @@ export default function Experience() {
                         <ambientLight />
                         <directionalLight position={[1, 0, 0]} />
                         <directionalLight position={[-1, 0, 0]} />
-                        <OrbitControls makeDefault />
                         <AV21
                             isMoving={true}
                             scale={1}
@@ -55,32 +84,31 @@ export default function Experience() {
                         />
                     </Canvas>
                 </div>
-                Speed:
-                <input
-                    type="range"
-                    min="1"
-                    max="20"
-                    step={"1"}
-                    value={String(movementSpeed)}
-                    onChange={(e) => setMovementSpeed(Number(e.target.value))}
-                />
-                {String(movementSpeed * 10) + " mph"}
+
+                <center>
+                    Speed:
+                    <input
+                        type="range"
+                        min="1"
+                        max="20"
+                        step={"1"}
+                        value={String(movementSpeed)}
+                        onChange={(e) => setMovementSpeed(parseInt(e.target.value))}
+                    />
+                    {String(movementSpeed * 10) + " mph"}
+                </center>
             </div>
             <p>
-                MIT Driverless is a student club collobration between MIT, Pitsburgh, Rocheter and Waterloo that
-                competes in the Indy Autonomous Challenge (Las Vegas, Indiannapolis, Monza).
+                MIT Driverless is a student club collaboration between MIT, Pitsburgh, Rochester and Waterloo that
+                competes in the Indy Autonomous Challenge (Las Vegas, Indiannapolis, Monza in Italy).
             </p>
-            <p>
-                Im a part of Simulation and Infrastructure team that aims to optimize the developer experience of the
-                other subteams (Perception, Controls, etc.) by maintaining and updating the tech stack (Docker, ROS2,
-                Asseto Corsa, LGSVL).
-            </p>
+            {renderCarContent()}
 
             <h4>web3 gaming</h4>
             <p>
-                Cradle is an early stage crypto-gaming that I joined as the 8th employee as a{" "}
-                <span style={{textDecoration: "line-through"}}>no stack</span> full stack engineer where it grew from 0
-                to over 10k users. I have worked 2 co-op terms and part time over the span of 1.5 years at the company.
+                Cradle is an early stage crypto-gaming that I joined as the 8th employee as a full stack engineer where
+                it grew from 0 to over 10k users. I have worked 2 co-op terms and part time over the span of 1.5 years
+                at the company.
             </p>
             <p>
                 Some cool accomplishments were:
@@ -97,7 +125,7 @@ export default function Experience() {
             </p>
 
             <h4>virtual shoe try-on</h4>
-            <Canvas style={{height: "500px"}}>
+            <Canvas style={{height: "250px"}}>
                 <Suspense fallback={<Loader />}>
                     <pointLight position={[-2, -2, 0]} />
                     <ambientLight />
@@ -106,11 +134,25 @@ export default function Experience() {
             </Canvas>
             <p>
                 I worked on experimental AR features to create an interactive online shopping experience during the
-                pandemic for the e-commerce company Zappos (owned by Amazon). I also was a part of the Machine
+                pandemic for the e-commerce company Zappos (subsidiary of Amazon). I also was a part of the Machine
                 Intelligence team worked on implementing image segmentation models for foot recognition. It was mind
                 boggling watching my work be deployed into the Zappos mobile app beta used by millions of people.
             </p>
-            <p>The internship strucutre was very unique and unstructured and allowed for rapid experimentation!</p>
+            <p>The internship structure was very unique and allowed for rapid experimentation!</p>
+
+            <h4>other</h4>
+            <p>
+                Currently, I'm at Geotab, a global leader in telematics. They create a device that plugs into vehicles
+                and can be used to gather key data about the vehicle to make more optimized decisions. I'm working as a
+                Software Developer under the Data and Analytics department. This is my first co-op in a mid-sized
+                company and I am learning more about cloud technologies, containerization, orchestration, E2E testing
+                and Java.
+            </p>
+            <p>
+                In the summer of 2021, I did an internship at RBC under the Summer Tech Labs program. During those 8
+                weeks, I sharpened my full-stack web development skills and become more familiar with the Agile
+                methodology.
+            </p>
         </div>
     );
 }

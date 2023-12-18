@@ -6,13 +6,12 @@ import Contact from "../components/Contact";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <div className="page-wrapper">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="inner-wrapper">
                 <main>
                     <Hero />
@@ -29,4 +28,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Jatin Mehta's Lair</title>;
+export const Head: HeadFC = () => <title>Jatin Mehta</title>;

@@ -35,11 +35,7 @@ export default function Projects() {
             </p>
 
             <h4>Wall of Projects</h4>
-            <p>
-                Development in Progress - This is just supposed to kind of emulate a wall with post its for each project
-                that comes. Its not supposed to be super organized, just something people can hover over/click and learn
-                more about.
-            </p>
+            <p>Development in Progress.</p>
         </div>
     );
 }

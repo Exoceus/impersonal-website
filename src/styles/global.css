@@ -7,7 +7,17 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
     background-color: black;
-    color: white;
+    color: white !important;
+}
+
+a {
+    color: white !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.1rem;
 }
 
 nav {
@@ -35,7 +45,12 @@ main {
 }
 
 .page-wrapper {
-    padding: 1rem;
+    padding: 0 1rem;
+}
+
+.inner-wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .explorer-section {
@@ -58,4 +73,35 @@ h4 {
     text-transform: lowercase;
     font-weight: 600;
     font-size: 1.5rem;
+}
+
+center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-title {
+    font-weight: 100;
+    font-size: 3rem;
+    margin-top: 25vh;
+}
+
+.hero-title > span {
+    font-weight: 900;
+}
+
+.hero-subtitle {
+    font-weight: 100;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero > p {
+    margin-bottom: 25vh;
 }
