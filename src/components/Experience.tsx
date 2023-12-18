@@ -1,4 +1,4 @@
-import {OrbitControls} from "@react-three/drei";
+import {OrbitControls, ScrollControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 import React, {Suspense, useEffect, useState} from "react";
 
@@ -101,7 +101,9 @@ export default function Experience() {
                 <Suspense fallback={<Loader />}>
                     <pointLight position={[-2, -2, 0]} />
                     <ambientLight />
-                    <Shoe position={[0, -0.25, 0]} rotation={[0, shoeRot + 0.5, 0.5]} scale={[1.1, 1.1, 1.1]} />
+                    <ScrollControls pages={10}>
+                        <Shoe position={[0, -0.25, 0]} rotation={[0, 0, 0.5]} scale={[1.1, 1.1, 1.1]} />
+                    </ScrollControls>
                 </Suspense>
             </Canvas>
             <p>
