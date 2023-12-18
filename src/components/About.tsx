@@ -12,7 +12,7 @@ export default function About() {
             <div className="explorer-section">
                 <div style={{height: "100%", display: "flex", justifyContent: "space-between"}}>
                     <div></div>
-                    <Canvas className="lever-canvas">
+                    <Canvas shadows className="lever-canvas">
                         <Suspense fallback={<Loader />}>
                             <directionalLight position={[0, 0, 5]} />
                             <ambientLight />
