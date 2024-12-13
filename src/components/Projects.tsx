@@ -8,13 +8,12 @@ export default function Projects() {
                 <a href="https://funfirst.blog">Fundamentals First</a>
             </h4>
             <p>
-                Honestly, I started this blog to force myself to learn technical concepts on a semi-regular basis. Since
-                I’m going to read about them on my own time, why not write an article about it? I explore topics I’m
+                I started this blog to force myself to learn technical concepts on a semi-regular basis. I explore topics I’m
                 curious about while trying to consolidate my learnings into a (mostly) concise and enjoyable
                 introduction to these ideas.
             </p>
             <p>
-                Also, I am very prone to slacking of on consistently writing for the blog, so if you don't see any
+                Also, I am very prone to slacking off on consistently writing for the blog, so if you don't see any
                 articles published in the past few weeks, give me a nudge.
             </p>
 
@@ -40,22 +39,10 @@ export default function Projects() {
 
             <h4>Others</h4>
             <p>
-                Check out my <a href="https://github.com/Exoceus">GitHub</a>.
+                Check out my <a href="https://github.com/Exoceus">GitHub</a> for all my projects.
             </p>
-            <p>Some highlights:</p>
-            <ul>
-                <li>
-                    <a href="https://chrome.google.com/webstore/detail/cloak/bggcfpefjionjmddhdpljielmcbajomp">
-                        dark mode for Google Calendar
-                    </a>
-                </li>
-                <li>
-                    <a href="https://airpong.netlify.app/">hand controlled pong</a>
-                </li>
-                <li>
-                    <a href="https://github.com/Exoceus/covid19-whatsapp-bot/tree/main">whatsapp covid stats bot</a>
-                </li>
-            </ul>
+            <p>Some highlights: <a href="https://airpong.netlify.app/">hand controlled pong</a> and <a href="https://github.com/Exoceus/covid19-whatsapp-bot/tree/main">whatsapp covid stats bot</a>
+            </p>
         </div>
     );
 }

@@ -1,5 +1,5 @@
-import {Canvas} from "@react-three/fiber";
-import React, {Suspense, useEffect, useState} from "react";
+import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState } from "react";
 
 import Loader from "./Loader";
 
@@ -69,6 +69,22 @@ export default function Experience() {
             <h3>Experience</h3>
 
             <div style={{minHeight: "300px"}}>
+                <h4>incoming @ meta</h4>
+                <p>
+                    Looking forward to joining as a Production Engineer (intersection of SWE and Infra) Intern in Summer 2025 at the Meta HQ.
+                </p>
+                <h4>research</h4>
+                <p>
+                    I have always been curious about research and working at the very cutting edge of knowledge creation. Ever since starting university, I wanted to experience being in research to decide whether to pursue further education.
+                </p>
+                <p>
+                    In Fall 2024, I worked with <a href="https://cs.uwaterloo.ca/~xiaohu/">Prof. Xiao Hu</a> in the Data Systems Group to implement sparse matrix multiplication for database query processing and output size estimation (k-minimum value) for queries.
+                </p>
+                <p>
+                    In Winter 2025, I will be working with <a href="https://cs.uwaterloo.ca/~fkerschb/">Prof. 
+                    Florian Kerschbaum</a> on a project involved private record linkage using a smoothed locality-preserving hash function.
+                </p>
+
                 <h4>autonomous race car</h4>
                 <div style={{height: "200px"}}>
                     <Canvas flat>
@@ -143,10 +159,8 @@ export default function Experience() {
 
             <h4>other</h4>
             <p>
-                Currently, I'm at Geotab, a global leader in telematics. They create a device that plugs into vehicles
-                and can be used to gather key data about the vehicle to make more optimized decisions. I'm working as a
-                Software Developer under the Data and Analytics department. This is my first co-op in a mid-sized
-                company and I am learning more about cloud technologies, containerization, orchestration, E2E testing
+                In 2023/24, I worked at Geotab, a global leader in telematics. This was my first co-op in a mid-sized
+                company and I learned more about cloud technologies, containerization, orchestration, E2E testing
                 and Java.
             </p>
             <p>

@@ -1,17 +1,16 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;600;900&family=JetBrains+Mono:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;900&family=JetBrains+Mono:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background-color: black;
-    color: white !important;
+    background-color: white;
+    color: black !important;
 }
 
 a {
-    color: white !important;
+    color: black !important;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -68,7 +67,7 @@ main {
 
 h3 {
     text-transform: uppercase;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Silkscreen", sans-serif;
     letter-spacing: 4px;
     text-align: right;
     margin-right: 1rem;
@@ -77,13 +76,19 @@ h3 {
 h3::after {
     content: "";
     display: block;
-    background-color: white;
-    height: 1px;
+    background-color: black;
+    height: 3px;
     width: 0.75rem;
     position: absolute;
     right: 0px;
-    margin-top: -0.75rem;
+    margin-top: -0.45rem;
 }
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1; } /* Fully visible at the start and end */
+    50% { opacity: 0; }      /* Invisible at the midpoint */
+  }
 
 h4 {
     text-transform: lowercase;
@@ -101,7 +106,34 @@ center {
 .hero-title {
     font-weight: 100;
     font-size: 3rem;
-    margin-top: 25vh;
+    border: 5px solid red;
+    display: grid;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#hello{
+    background-color: red;
+    border-radius: 0.5rem 0.5rem 0 0;
+    color: white;
+    padding: 0.5rem;
+}
+
+#hello-title{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#hello-subtitle{
+    font-size: 2.5rem;
+}
+
+span#name{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    padding: 2rem 0;
 }
 
 .hero-title > span {
@@ -116,9 +148,13 @@ center {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .hero > p {
     margin-bottom: 25vh;
+}
+
+footer{
+    padding: 0 0 2rem 0;
 }
