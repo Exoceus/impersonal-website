@@ -82,11 +82,12 @@ h3::after {
     position: absolute;
     right: 0px;
     margin-top: -0.45rem;
+    animation: blink 1s infinite;
 }
 
 
 @keyframes blink {
-    0%, 100% { opacity: 1; } /* Fully visible at the start and end */
+    0%, 25%, 75%, 100% { opacity: 1; } /* Fully visible at the start and end */
     50% { opacity: 0; }      /* Invisible at the midpoint */
   }
 
