@@ -69,9 +69,9 @@ export default function Experience() {
             <h3>Experience</h3>
 
             <div style={{minHeight: "300px"}}>
-                <h4>incoming @ meta</h4>
+                <h4>production engineer intern @ meta</h4>
                 <p>
-                    Looking forward to joining as a Production Engineer (intersection of SWE and Infra) Intern in Summer 2025 at the Meta HQ.
+                    I had a blast interning on the Ads Serving team on the ML side. Translation: I worked on improving the internal infrastructure used to deploy and manage ML models used in ads across all of Meta's family of apps (FOA). Production engineers work like infra SWEs and focus on improving the reliability, efficiency and scalability of systems.
                 </p>
                 <h4>research</h4>
                 <p>
