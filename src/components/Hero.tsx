@@ -9,7 +9,7 @@ export default function Hero() {
                     <span id="name">Jatin Mehta</span>
                 </div>
                 <p>
-                Here is <a href="resume.pdf">my resume</a> (Last updated: Dec 13, 2024)
+                Here is <a href="resume.pdf">my resume</a> (Last updated: Aug 21, 2025)
             </p>
             </div>
         </div>
