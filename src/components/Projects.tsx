@@ -5,7 +5,7 @@ export default function Projects() {
         <div>
             <h3>Projects</h3>
             <h4>
-                <a href="https://funfirst.blog">Fundamentals First</a>
+                <a href="https://blog.jatinm.com">Fundamentals First</a>
             </h4>
             <p>
                 I started this blog to force myself to learn technical concepts on a semi-regular basis. I explore topics I’m
