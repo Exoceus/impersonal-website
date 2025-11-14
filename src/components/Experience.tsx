@@ -81,7 +81,7 @@ export default function Experience() {
                     In Fall 2024, I worked with <a href="https://cs.uwaterloo.ca/~xiaohu/">Prof. Xiao Hu</a> in the Data Systems Group to implement sparse matrix multiplication for database query processing and output size estimation (k-minimum value) for queries.
                 </p>
                 <p>
-                    In Winter 2025, I will be working with <a href="https://cs.uwaterloo.ca/~fkerschb/">Prof. 
+                    In Winter 2025, I worked with <a href="https://cs.uwaterloo.ca/~fkerschb/">Prof. 
                     Florian Kerschbaum</a> on a project involved private record linkage using a smoothed locality-preserving hash function.
                 </p>
 

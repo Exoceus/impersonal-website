@@ -18,7 +18,7 @@ export default function Projects() {
             </p>
 
             <h4>
-                <a href="https://opp-hub.com">OppHub</a>
+                <a href="https://github.com/Exoceus/OppHub">OppHub</a>
             </h4>
             <p>
                 When I moved to Canada I became vaguely aware of the vast number of extracurricular activities available

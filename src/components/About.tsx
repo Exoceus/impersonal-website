@@ -49,7 +49,7 @@ export default function About() {
 
                     <h4>Sometimes Always Learning</h4>
                     <p>
-                        I am going to be entering my fourth year of studying Computer Science at the University of
+                        I am currently in my fourth year of studying Computer Science at the University of
                         Waterloo. Ever since high school, I had aimed to
                         get into UWaterloo and having been in Waterloo, I have gotten to learn so much more about
                         technology and software from a first levels approach. My favourite courses so far have been: Applied Cryptography, Object-Oriented Programming (Enriched), Compilers Lite* and Linear Programming.
